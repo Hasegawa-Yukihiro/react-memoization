@@ -10,6 +10,9 @@ const Home = () => {
       <button onClick={() => navigate("not-memo-parent")}>
         React.memo なし
       </button>
+      <button onClick={() => navigate("useCallback-parent")}>
+        useCallback あり
+      </button>
     </div>
   );
 };

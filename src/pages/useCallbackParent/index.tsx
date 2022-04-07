@@ -1,6 +1,6 @@
-import React, { memo, useEffect, useState } from "react";
+import React, { memo, useCallback, useEffect, useState } from "react";
 
-const Child: React.FC<{ count: number; onClick?: () => void }> = memo(
+const Child: React.FC<{ count: number; onClick: () => void }> = memo(
   (props) => {
     console.log("Childeレンダリング");
 
@@ -13,24 +13,23 @@ const Child: React.FC<{ count: number; onClick?: () => void }> = memo(
   }
 );
 
-export const MemoParent: React.FC = (props) => {
+export const UseCallbackParent: React.FC = (props) => {
   const [parentCount, setParentCount] = useState(0);
   const [childCount, setChildCount] = useState(0);
 
-  /** 下記関数をChildコンポーネントのpropsへ渡すとMemoParentコンポーネントが際レンダリングされる */
-  // const handleClick = () => {
-  //   console.log("click");
-  // };
-
   console.log("Parentレンダリング");
 
+  const handleClick = useCallback(() => {
+    console.log("click");
+  }, []);
+
   useEffect(() => {
-    console.log("🟢 React.memoでメモ化してるよ 🟢");
+    console.log("🟢 useCallbackでメモ化してるよ 🟢");
   }, []);
 
   return (
     <div style={{ padding: 16 }}>
-      <h2>React.memoでメモ化しているページ</h2>
+      <h2>useCallbackでメモ化しているページ</h2>
       <button
         type="button"
         onClick={() => {
@@ -48,10 +47,7 @@ export const MemoParent: React.FC = (props) => {
         Child count up
       </button>
       <p>Parentコンポーネント：{parentCount}</p>
-      <Child
-        count={childCount}
-        // onClick={handleClick}
-      />
+      <Child count={childCount} onClick={handleClick} />
       <div>{props.children}</div>
     </div>
   );

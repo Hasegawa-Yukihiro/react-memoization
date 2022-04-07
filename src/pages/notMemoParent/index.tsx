@@ -13,12 +13,12 @@ export const NotMemoParent: React.FC = (props) => {
   console.log("Parentレンダリング");
 
   useEffect(() => {
-    console.log("🔴 React.memo化してないよ 🔴");
+    console.log("🔴 React.memoでメモ化してないよ 🔴");
   }, []);
 
   return (
     <div style={{ padding: 16 }}>
-      <h2>memo化していないページ</h2>
+      <h2>React.memoでメモ化していないページ</h2>
       <button
         type="button"
         onClick={() => {
