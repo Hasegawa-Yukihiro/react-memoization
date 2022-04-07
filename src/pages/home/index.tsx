@@ -13,6 +13,9 @@ const Home = () => {
       <button onClick={() => navigate("useCallback-parent")}>
         useCallback あり
       </button>
+      <button onClick={() => navigate("not-useCallback-parent")}>
+        useCallback なし
+      </button>
     </div>
   );
 };
