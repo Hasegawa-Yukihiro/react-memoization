@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { Home } from "../pages/home";
 import { MemoParent } from "../pages/memoParent";
+import { NotMemoParent } from "../pages/notMemoParent";
 import { usePageRoute } from "./hooks";
 
 const Router = () => {
@@ -15,6 +16,7 @@ const Router = () => {
     <HistoryRouter history={history}>
       <Routes>
         <Route path="/memo-parent" element={<MemoParent />} />
+        <Route path="/not-memo-parent" element={<NotMemoParent />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </HistoryRouter>

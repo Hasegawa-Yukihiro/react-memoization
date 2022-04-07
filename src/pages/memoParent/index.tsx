@@ -17,9 +17,11 @@ export const MemoParent: React.FC = (props) => {
   const [parentCount, setParentCount] = useState(0);
   const [childCount, setChildCount] = useState(0);
 
+  /** 下記関数をChildコンポーネントのpropsへ渡すとMemoParentコンポーネントが際レンダリングされる */
   // const handleClick = () => {
   //   console.log("click");
   // };
+
   console.log("Parentレンダリング");
 
   useEffect(() => {
@@ -27,8 +29,8 @@ export const MemoParent: React.FC = (props) => {
   }, []);
 
   return (
-    <React.Fragment>
-      <h2>React.memoの検証ページ</h2>
+    <div style={{ padding: 16 }}>
+      <h2>React.memo化しているページ</h2>
       <button
         type="button"
         onClick={() => {
@@ -51,6 +53,6 @@ export const MemoParent: React.FC = (props) => {
         // onClick={handleClick}
       />
       <div>{props.children}</div>
-    </React.Fragment>
+    </div>
   );
 };

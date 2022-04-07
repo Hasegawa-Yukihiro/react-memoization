@@ -10,13 +10,15 @@ export const NotMemoParent: React.FC = (props) => {
   const [parentCount, setParentCount] = useState(0);
   const [childCount, setChildCount] = useState(0);
 
+  console.log("Parentレンダリング");
+
   useEffect(() => {
-    console.log("🔴 メモ化してないよ 🔴");
+    console.log("🔴 React.memo化してないよ 🔴");
   }, []);
 
   return (
-    <React.Fragment>
-      <h2>メモ化していない状態</h2>
+    <div style={{ padding: 16 }}>
+      <h2>memo化していないページ</h2>
       <button
         type="button"
         onClick={() => {
@@ -36,6 +38,6 @@ export const NotMemoParent: React.FC = (props) => {
       <p>Parentコンポーネント：{parentCount}</p>
       <Child count={childCount} />
       <div>{props.children}</div>
-    </React.Fragment>
+    </div>
   );
 };

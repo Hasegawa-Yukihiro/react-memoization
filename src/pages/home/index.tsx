@@ -7,7 +7,9 @@ const Home = () => {
   return (
     <div style={{ padding: 16 }}>
       <button onClick={() => navigate("memo-parent")}>React.memo あり</button>
-      {/* <button onClick={() => navigate("memo-parent")}>React.memo なし</button> */}
+      <button onClick={() => navigate("not-memo-parent")}>
+        React.memo なし
+      </button>
     </div>
   );
 };
