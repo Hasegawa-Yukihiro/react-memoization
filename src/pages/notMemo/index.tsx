@@ -6,7 +6,7 @@ const Child: React.FC<{ count: number }> = (props) => {
   return <p>Childコンポーネント：{props.count}</p>;
 };
 
-export const NotMemoParent: React.FC = (props) => {
+export const NotMemo: React.FC = (props) => {
   const [parentCount, setParentCount] = useState(0);
   const [childCount, setChildCount] = useState(0);
 

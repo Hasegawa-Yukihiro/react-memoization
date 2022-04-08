@@ -6,17 +6,14 @@ const Home = () => {
 
   return (
     <div style={{ padding: 16 }}>
-      <button onClick={() => navigate("memo-parent")}>React.memo あり</button>
-      <button onClick={() => navigate("not-memo-parent")}>
-        React.memo なし
-      </button>
-      <button onClick={() => navigate("useCallback-parent")}>
-        useCallback あり
-      </button>
-      <button onClick={() => navigate("not-useCallback-parent")}>
+      <button onClick={() => navigate("memo")}>React.memo あり</button>
+      <button onClick={() => navigate("notMemo")}>React.memo なし</button>
+      <button onClick={() => navigate("useCallback")}>useCallback あり</button>
+      <button onClick={() => navigate("notUseCallback")}>
         useCallback なし
       </button>
-      <button onClick={() => navigate("useMemo-parent")}>useMemo あり</button>
+      <button onClick={() => navigate("useMemo")}>useMemo あり</button>
+      <button onClick={() => navigate("notUseMemo")}>useMemo なし</button>
     </div>
   );
 };
