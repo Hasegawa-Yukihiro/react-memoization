@@ -9,6 +9,7 @@ import { MemoParent } from "../pages/memoParent";
 import { NotMemoParent } from "../pages/notMemoParent";
 import { NotUseCallbackParent } from "../pages/notUseCallbackParent";
 import { UseCallbackParent } from "../pages/useCallbackParent";
+import { UseMemoParent } from "../pages/useMemoParent";
 import { usePageRoute } from "./hooks";
 
 const Router = () => {
@@ -24,6 +25,7 @@ const Router = () => {
           path="/not-useCallback-parent"
           element={<NotUseCallbackParent />}
         />
+        <Route path="/useMemo-parent" element={<UseMemoParent />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </HistoryRouter>
