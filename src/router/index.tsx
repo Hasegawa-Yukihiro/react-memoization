@@ -6,7 +6,9 @@ import {
 } from "react-router-dom";
 import { Home } from "../pages/home";
 import { Memo } from "../pages/memo";
+import { MemoObject } from "../pages/memoObject";
 import { NotMemo } from "../pages/notMemo";
+import { NotMemoObject } from "../pages/notMemoObject";
 import { NotUseCallback } from "../pages/notUseCallback";
 import { NotUseMemo } from "../pages/notUseMemo";
 import { UseCallbackParent } from "../pages/useCallbackParent";
@@ -25,6 +27,8 @@ const Router = () => {
         <Route path="/notUseCallback" element={<NotUseCallback />} />
         <Route path="/useMemo" element={<UseMemo />} />
         <Route path="/notUseMemo" element={<NotUseMemo />} />
+        <Route path="/memoObject" element={<MemoObject />} />
+        <Route path="/notMemoObject" element={<NotMemoObject />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </HistoryRouter>

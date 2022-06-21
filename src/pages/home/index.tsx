@@ -14,6 +14,12 @@ const Home = () => {
       </button>
       <button onClick={() => navigate("useMemo")}>useMemo あり</button>
       <button onClick={() => navigate("notUseMemo")}>useMemo なし</button>
+      <button onClick={() => navigate("memoObject")}>
+        Objectのメモ化 あり
+      </button>
+      <button onClick={() => navigate("notMemoObject")}>
+        Objectのメモ化 なし
+      </button>
     </div>
   );
 };

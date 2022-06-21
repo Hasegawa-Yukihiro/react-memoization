@@ -3,11 +3,7 @@ import React, { memo, useEffect, useState } from "react";
 const Child: React.FC<{ count: number }> = memo((props) => {
   console.log("Childeレンダリング");
 
-  return (
-    <React.Fragment>
-      <p>Childコンポーネント：{props.count}</p>
-    </React.Fragment>
-  );
+  return <p>Childコンポーネント：{props.count}</p>;
 });
 
 export const Memo: React.FC = (props) => {
