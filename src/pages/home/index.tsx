@@ -20,6 +20,7 @@ const Home = () => {
       <button onClick={() => navigate("notMemoObject")}>
         Objectのメモ化 なし
       </button>
+      <button onClick={() => navigate("memoMap")}>map使用時のメモ化</button>
     </div>
   );
 };

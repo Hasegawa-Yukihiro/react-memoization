@@ -5,6 +5,7 @@ import {
   unstable_HistoryRouter as HistoryRouter,
 } from "react-router-dom";
 import { Home } from "../pages/home";
+import { MemoMap } from "../pages/mapMemo";
 import { Memo } from "../pages/memo";
 import { MemoObject } from "../pages/memoObject";
 import { NotMemo } from "../pages/notMemo";
@@ -29,6 +30,7 @@ const Router = () => {
         <Route path="/notUseMemo" element={<NotUseMemo />} />
         <Route path="/memoObject" element={<MemoObject />} />
         <Route path="/notMemoObject" element={<NotMemoObject />} />
+        <Route path="/memoMap" element={<MemoMap />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </HistoryRouter>
