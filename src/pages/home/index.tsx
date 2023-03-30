@@ -21,6 +21,9 @@ const Home = () => {
         Objectのメモ化 なし
       </button>
       <button onClick={() => navigate("memoMap")}>map使用時のメモ化</button>
+      <button onClick={() => navigate("propsCallback")}>
+        propsに直接useCallbackの戻り値を渡した時
+      </button>
     </div>
   );
 };

@@ -12,6 +12,7 @@ import { NotMemo } from "../pages/notMemo";
 import { NotMemoObject } from "../pages/notMemoObject";
 import { NotUseCallback } from "../pages/notUseCallback";
 import { NotUseMemo } from "../pages/notUseMemo";
+import { PropsCallback } from "../pages/propsCallback";
 import { UseCallbackParent } from "../pages/useCallbackParent";
 import { UseMemo } from "../pages/useMemo";
 import { usePageRoute } from "./hooks";
@@ -31,6 +32,7 @@ const Router = () => {
         <Route path="/memoObject" element={<MemoObject />} />
         <Route path="/notMemoObject" element={<NotMemoObject />} />
         <Route path="/memoMap" element={<MemoMap />} />
+        <Route path="/propsCallback" element={<PropsCallback />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </HistoryRouter>
